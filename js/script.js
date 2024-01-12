@@ -7,4 +7,3 @@ document.addEventListener('mousemove', function (event) {
     // Apply the rotation to the image
     rotatingImage.style.transform = rotationValue;
   });
-  
