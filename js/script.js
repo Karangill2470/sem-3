@@ -34,3 +34,38 @@ document.addEventListener('mousemove', function (event) {
     })
   })
  })
+
+
+
+
+//  nav links 
+
+gsap.registerPlugin(Flip);
+
+const links = document.querySelectorAll("nav ul li a");
+const activeNav = document.querySelector(".active-nav");
+
+links.forEach((link) => {
+    link.addEventListener("click", (e) => {
+        e.preventDefault();
+
+        // Reset color for all links
+        gsap.to(links, { color: "#252525" });
+
+        // Set color for the clicked link
+        gsap.to(link, { color: "#385ae0" });
+
+        // Move the activeNav under the clicked link
+        const state = Flip.getState(activeNav);
+        activeNav.style.width = `${link.clientWidth}px`; // Adjust width if necessary
+        Flip.from(state, {
+            duration: 0.5,
+            absolute: true,
+            ease: "power2.out",
+            onComplete: () => {
+                link.appendChild(activeNav);
+            },
+        });
+    });
+});
+
