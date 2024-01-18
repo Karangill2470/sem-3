@@ -4,7 +4,30 @@
 }
 
 body {
-    background-color: #101111;
+    background-color: #000;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #000;
+    padding: 10px 20px;
+}
+
+header > .CS,
+header > .game {
+    border-radius: 50%;
+    overflow: hidden;
+    width: 50px; /* Adjust the size as needed */
+    height: 50px; /* Adjust the size as needed */
+}
+
+header > .CS img,
+header > .game img {
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
 }
 
 @font-face {
@@ -22,6 +45,11 @@ body {
     src: url(../fonts/Kenia-Regular.ttf);
 }
 
+h1, h2, p, h3 {
+    opacity: 0;
+    animation: fade 2.3s ease-in 0.6s forwards;
+}
+
 h1 {
     align-items: center;
     justify-content: center;
@@ -31,11 +59,10 @@ h1 {
     background: linear-gradient(rgb(67, 124, 205), rgb(69, 214, 202));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    opacity: 0;
     font-family: 'one', sans-serif;
     pointer-events: none;
     position: relative;
-    animation: fade 2.3s ease-in 1s forwards;
+    margin: 0 auto;
 }
 
 h1::after {
@@ -44,8 +71,30 @@ h1::after {
     left: 0;
     bottom: 0;
     width: 100%;
-    height: 2px; /* Adjust the underline thickness */
+    height: 2px;
     background-color: antiquewhite;
+}
+
+h2 {
+    color: antiquewhite;
+    font-size: 4rem;
+    font-weight: 900;
+    text-decoration: double;
+}
+
+p {
+    color: antiquewhite;
+    font-size: 1.5rem;
+    letter-spacing: 4px;
+    display: inline-block;
+}
+
+h3 {
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 2rem;
+    font-weight: 900;
+    display: inline-block;
 }
 
 @keyframes fade {
@@ -55,37 +104,4 @@ h1::after {
     100% {
         opacity: 1;
     }
-}
-
-h2
-{
-   color:#AAF0D1 ; 
-   align-items: center;
-   justify-content: center;
-   text-align: center;
-   font-size: 4rem;
-   font-weight: 900;
-}
-
-p
-{
-    /* color: #5369b9; */
-    color: antiquewhite;
-    text-align: center;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.5rem;
-    letter-spacing: 4px;
-    display: inline-block
-}
-h3
-{
-    background: linear-gradient(rgb(67, 124, 205), rgb(69, 214, 202));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;    align-items: center;
-    justify-content: center;
-    text-align: center;
-    font-size: 2rem;
-    font-weight: 900; 
-    display: inline-block
 }
