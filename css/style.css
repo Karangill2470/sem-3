@@ -191,14 +191,17 @@ nav ul li
 /* about page  */
 #about
 {
-    width: 100%;
+    width: 99%;
     height: 100vh;
 float: left;   
 align-items: center;
- background-image: url(../img/sd.jpg); 
+ /* background-image: url(../img/sd.jpg);  */
+ background-color:coral;
 background-size:cover;
 background-repeat: no-repeat; 
-}
+border: 7px solid;
+/* border-image: linear-gradient(to right, #ff7e5f, #feb47b, #ffdf9e, #87ffac, #4cf0d1); */
+border-image-slice: 1;}
 
 .desc
 {
@@ -261,7 +264,8 @@ margin-left: 80px;
         width: 100%;
     height: 100vh;
     background: rgb(2,0,36);
-    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(48,48,54,1) 35%, rgba(0,212,255,1) 100%);
+    /* background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(48,48,54,1) 35%, rgba(0,212,255,1) 100%); */
+    background-color: #fff;
 display: grid;
 grid-template-columns:repeat(6, 1fr) ;
 grid-gap: 3rem;
@@ -270,6 +274,7 @@ grid-gap: 3rem;
 
 .card
 {
+    margin-top: 38px;
    height: 15rem;
    /* width: auto; */
    border-radius: 1rem;
@@ -363,6 +368,7 @@ align-items: center;
  /* background-image: url(../img/sd.jpg);  */
 background-size:cover;
 background-repeat: no-repeat; 
+background-color: coral;
 }
 
 
@@ -374,6 +380,7 @@ background-repeat: no-repeat;
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-top: 20px ;
 }
 
 .container1 {
